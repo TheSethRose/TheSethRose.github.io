@@ -118,5 +118,18 @@
     <!-- 100% privacy-first analytics -->
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+
+    <!-- Fix for third-party script integrity issues -->
+    <script>
+      // Remove integrity attributes from Cloudflare and SimpleAnalytics scripts
+      document.addEventListener('DOMContentLoaded', function() {
+        const scripts = document.querySelectorAll('script[src*="cloudflareinsights.com"], script[src*="simpleanalyticscdn.com"]');
+        scripts.forEach(script => {
+          if (script.hasAttribute('integrity')) {
+            script.removeAttribute('integrity');
+          }
+        });
+      });
+    </script>
 </body>
 </html>
