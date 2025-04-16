@@ -24,21 +24,6 @@
     <meta name="twitter:description" content="I help businesses automate, optimize, and accelerate with AI, ServiceNow, and modern automation tools.">
     <meta name="twitter:image" content="https://sethrose.dev/assets/images/profile.png">
     <script>
-      function renderSenderForms() {
-        if (window.senderForms) {
-          window.senderForms.render("m9j9z83zez6nn59cdl9", {
-            initialStatus: "enabled",
-            onRender: function(formId) {
-              console.log("Form rendered successfully: " + formId);
-            }
-          });
-        }
-      }
-
-      // Add event listener for form loading
-      window.addEventListener("onSenderFormsLoaded", renderSenderForms);
-
-      // Initialize Sender with explicit rendering
       (function (s, e, n, d, er) {
         s['Sender'] = er;
         s[er] = s[er] || function () {
@@ -48,15 +33,10 @@
             m = e.getElementsByTagName(n)[0];
         a.async = 1;
         a.crossOrigin = "anonymous";
-        a.src = d + "?explicit=true&onload=renderSenderForms";
+        a.src = d;
         m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
       sender('ce0fdabd0d3944');
-
-      // If forms are already loaded, render them immediately
-      if (window.senderFormsLoaded) {
-        renderSenderForms();
-      }
     </script>
 </head>
 <body>
