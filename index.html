@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seth Rose | AI Implementation Expert</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.sender.net; connect-src 'self' https://cdn.sender.net https://*.sender.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.sender.net;">
-    <link rel="stylesheet" href="assets/styles/style.css?v=1">
+
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://cdn.sender.net">
+    <link rel="preload" href="assets/styles/style.css" as="style">
+    <link rel="preload" href="assets/images/profile.png" as="image" fetchpriority="high">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.sender.net https://scripts.simpleanalyticscdn.com; connect-src 'self' https://cdn.sender.net https://*.sender.net https://queue.simpleanalyticscdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.sender.net https://queue.simpleanalyticscdn.com;">
+    <link rel="stylesheet" href="assets/styles/style.css?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
@@ -23,6 +29,29 @@
     <meta name="twitter:title" content="Seth Rose | AI Implementation Expert">
     <meta name="twitter:description" content="Building practical AI solutions with a focus on implementation, RAG systems, and custom agent development.">
     <meta name="twitter:image" content="https://sethrose.dev/assets/images/profile.png">
+
+    <!-- Structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Seth Rose",
+      "url": "https://sethrose.dev",
+      "image": "https://sethrose.dev/assets/images/profile.png",
+      "jobTitle": "AI Implementation Expert",
+      "description": "AI Implementation Expert specializing in practical LLM applications, RAG systems, and custom agent development.",
+      "sameAs": [
+        "https://github.com/TheSethRose",
+        "https://www.linkedin.com/in/sethlrose/",
+        "https://x.com/TheSethRose",
+        "https://bsky.app/profile/sethrose.dev",
+        "https://www.threads.net/@thesethrose",
+        "https://mastodon.social/@TheSethRose"
+      ],
+      "knowsAbout": ["Artificial Intelligence", "LLM Implementation", "RAG Systems", "AI Agents", "Software Development"]
+    }
+    </script>
+
     <script>
       (function (s, e, n, d, er) {
         s['Sender'] = er;
@@ -42,45 +71,52 @@
 <body>
     <div class="main-card">
         <div class="profile-row">
-            <img src="assets/images/profile.png" alt="Seth Rose" class="profile-image">
+            <picture>
+                <source srcset="assets/images/profile.webp" type="image/webp">
+                <img src="assets/images/profile.png" alt="Seth Rose - AI Implementation Expert" class="profile-image">
+            </picture>
         </div>
         <div class="social-row">
-            <a href="https://x.com/TheSethRose" target="_blank" rel="noopener" aria-label="X"><img src="assets/icons/x.svg" alt="X"></a>
-            <a href="https://github.com/TheSethRose" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.svg" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/sethlrose/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-            <a href="https://bsky.app/profile/sethrose.dev" target="_blank" rel="noopener" aria-label="Bluesky"><img src="assets/icons/bluesky.svg" alt="Bluesky"></a>
-            <a href="https://www.threads.net/@thesethrose" target="_blank" rel="noopener" aria-label="Threads"><img src="assets/icons/threads.svg" alt="Threads"></a>
-            <a href="https://mastodon.social/@TheSethRose" target="_blank" rel="noopener" aria-label="Mastodon"><img src="assets/icons/mastodon.svg" alt="Mastodon"></a>
+            <a href="https://x.com/TheSethRose" target="_blank" rel="noopener" aria-label="Follow Seth Rose on X (formerly Twitter)"><img src="assets/icons/x.svg" alt="X" width="22" height="22"></a>
+            <a href="https://github.com/TheSethRose" target="_blank" rel="noopener" aria-label="View Seth Rose's GitHub projects"><img src="assets/icons/github.svg" alt="GitHub" width="22" height="22"></a>
+            <a href="https://www.linkedin.com/in/sethlrose/" target="_blank" rel="noopener" aria-label="Connect with Seth Rose on LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"></a>
+            <a href="https://bsky.app/profile/sethrose.dev" target="_blank" rel="noopener" aria-label="Follow Seth Rose on Bluesky"><img src="assets/icons/bluesky.svg" alt="Bluesky" width="22" height="22"></a>
+            <a href="https://www.threads.net/@thesethrose" target="_blank" rel="noopener" aria-label="Follow Seth Rose on Threads"><img src="assets/icons/threads.svg" alt="Threads" width="22" height="22"></a>
+            <a href="https://mastodon.social/@TheSethRose" target="_blank" rel="noopener" aria-label="Follow Seth Rose on Mastodon"><img src="assets/icons/mastodon.svg" alt="Mastodon" width="22" height="22"></a>
         </div>
         <div class="card-content">
-            <div class="subtitle">AI IMPLEMENTATION EXPERT</div>
+            <div class="subtitle" id="role">AI IMPLEMENTATION EXPERT</div>
             <h1 class="main-title">Seth Rose</h1>
             <div class="desc">Helping businesses implement practical AI solutions with expert guidance on LLMs, RAG systems, and custom agent development.</div>
         </div>
-        <div class="links-list">
-            <a class="link-card gradient1" href="assets/public/resume.pdf" target="_blank" rel="noopener">
+        <div class="links-list" role="navigation" aria-label="Main links">
+            <a class="link-card gradient1" href="assets/public/resume.pdf" target="_blank" rel="noopener" aria-label="Download Seth Rose's resume">
                 <span>Resume</span>
-                <img src="assets/icons/resume.svg" alt="Resume" width="22" height="22">
+                <img src="assets/icons/resume.svg" alt="Resume icon" width="22" height="22">
             </a>
-            <a class="link-card gradient2" href="https://github.com/TheSethRose" target="_blank" rel="noopener">
+            <a class="link-card gradient2" href="https://github.com/TheSethRose" target="_blank" rel="noopener" aria-label="View Seth Rose's projects on GitHub">
                 <span>Projects</span>
-                <img src="assets/icons/github.svg" alt="GitHub" width="22" height="22">
+                <img src="assets/icons/github.svg" alt="GitHub icon" width="22" height="22">
             </a>
-            <a class="link-card gradient3 coming-soon-container" href="https://useagents.io" target="_blank" rel="noopener">
+            <a class="link-card gradient3 coming-soon-container" href="https://useagents.io" target="_blank" rel="noopener" aria-label="Visit UseAgents.io - platform coming soon">
                 <span>UseAgents.io</span>
-                <img src="assets/icons/robot.svg" alt="AI Agents" width="22" height="22">
+                <img src="assets/icons/robot.svg" alt="AI Agents icon" width="22" height="22">
                 <div class="coming-soon-overlay">COMING SOON</div>
             </a>
         </div>
 
-        <div class="section-divider"></div>
+        <div class="section-divider" role="separator" aria-hidden="true"></div>
 
         <div class="newsletter-section">
-            <h3>AI Implementation Weekly</h3>
+            <h3 id="newsletter-heading">AI Implementation Weekly</h3>
             <p>Get practical AI implementation insights, code examples, and early access to tools.</p>
-            <div style="text-align: left" class="sender-form-field" data-sender-form-id="m9j9z83zez6mn59cdl9"></div>
+            <div style="text-align: left" class="sender-form-field" data-sender-form-id="m9j9z83zez6mn59cdl9" aria-labelledby="newsletter-heading"></div>
         </div>
     </div>
     <div class="copyright">&copy; Inferno Assets, LLC - 2025</div>
+
+    <!-- 100% privacy-first analytics -->
+    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
 </body>
 </html>
