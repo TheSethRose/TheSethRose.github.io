@@ -63,15 +63,16 @@ body {
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
-    width: 40px;
     height: 40px;
+    width: 40px;
+    padding: 0;
     background: rgba(40, 38, 46, 0.85);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s ease-in-out 0.15s, transform 0.2s ease-in-out;
     z-index: 20;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
 }
@@ -80,15 +81,47 @@ body {
     width: 20px;
     height: 20px;
     fill: #fff;
+    margin: 0;
+    transition: fill 0.2s ease-in-out 0.15s;
+    position: relative;
+    z-index: 1;
 }
 
 .back-home-button:hover {
     background: #e09b5a;
     transform: scale(1.1);
+    transition-delay: 0s;
 }
 
 .back-home-button:hover svg {
     fill: #0a0a0a;
+    transition-delay: 0s;
+}
+
+.back-home-button::after {
+    content: "Home";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 1rem 0 25px;
+    background: #e09b5a;
+    color: #0a0a0a;
+    border-radius: 0 20px 20px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.back-home-button:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
 }
 
 .social-proof {
