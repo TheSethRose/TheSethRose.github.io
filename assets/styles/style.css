@@ -56,6 +56,49 @@ body {
     flex-direction: column;
     align-items: center;
     border: 1.5px solid rgba(255,255,255,0.04);
+    position: relative;
+}
+
+.back-home-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(40, 38, 46, 0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 20;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+
+.back-home-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.back-home-button:hover {
+    background: #e09b5a;
+    transform: scale(1.1);
+}
+
+.back-home-button:hover svg {
+    fill: #0a0a0a;
+}
+
+.social-proof {
+    font-size: 0.85rem;
+    color: #bdbdbd;
+    font-style: italic;
+    text-align: left;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
 }
 
 .profile-row {
@@ -551,7 +594,7 @@ body {
         margin-right: auto;
     }
     .subscribe-arrow {
-        display: none; /* Hide arrow on smaller screens */
+        display: none;
     }
     .subscribe-prompt {
          order: 0;
