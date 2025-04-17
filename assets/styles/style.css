@@ -443,3 +443,126 @@ body {
         rgba(255,255,255,0.01) 100%);
     margin: 2rem auto;
 }
+
+.subscribe-prompt {
+    margin-bottom: 0.5rem;
+}
+
+/* Keep other prompt styles */
+.subscribe-prompt > p,
+.subscribe-prompt > ul {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+.subscribe-prompt > ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+.subscribe-prompt > p:last-of-type {
+    margin-top: 1rem;
+}
+
+/* Ensure form field itself doesn't have unnecessary top margin */
+.newsletter-form .sender-form-field {
+    width: 100%;
+    margin-top: 0;
+    order: 2;
+}
+
+/* === Subscribe Page Two-Column Layout (Overrides) === */
+
+/* Ensure the container uses flex */
+.newsletter-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+/* Style for the left text column */
+.newsletter-text {
+    flex: 1 1 45%;
+    min-width: 280px;
+    order: 1;
+}
+
+/* Style for the right form column */
+.newsletter-form {
+    flex: 1 1 45%;
+    min-width: 280px;
+    max-width: 400px;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the prompt text/arrow group */
+.subscribe-prompt {
+    margin-bottom: 0.2rem;
+    order: 1;
+}
+
+.subscribe-cta-header {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e09b5a;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.subscribe-arrow {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0.5rem 0;
+    transform: matrix(1, 0, 0, -1, 0, 0) rotate(300deg);
+}
+
+/* Ensure the sender form container takes width and comes last */
+.newsletter-form .sender-form-field {
+    width: 100%;
+    margin-top: 0;
+    order: 2;
+}
+
+/* Stacking on smaller screens */
+@media (max-width: 768px) {
+    .newsletter-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .newsletter-text,
+    .newsletter-form {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 450px;
+        order: 0;
+    }
+    .subscribe-cta-header,
+    .subscribe-arrow {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .subscribe-arrow {
+        display: none; /* Hide arrow on smaller screens */
+    }
+    .subscribe-prompt {
+         order: 0;
+    }
+     .newsletter-form .sender-form-field {
+         order: 0;
+    }
+}
+
+/* Wider card specifically for subscribe page */
+.subscribe-page .main-card {
+    max-width: 800px;
+}
+/* === End Subscribe Page Styles === */
