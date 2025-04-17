@@ -227,6 +227,13 @@ body {
     background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
 }
 
+/* Gold gradient */
+.link-card.gradient4 {
+    background: linear-gradient(90deg, #f7b733 0%, #fc4a1a 100%); /* Example Gold/Orange */
+    /* Or try: background: linear-gradient(90deg, #DAA520 0%, #FFD700 100%); /* Dark Gold to Light Gold */
+    /* Or try: background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%); /* Gold to Teal - more contrast? */
+}
+
 .link-card:hover {
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 4px 18px 0 rgba(0,0,0,0.18);
